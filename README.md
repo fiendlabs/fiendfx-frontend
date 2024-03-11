@@ -6,8 +6,6 @@
 
 The **Decentralized Forex Exchange (DeFi FX) DApp** is a next-generation platform providing a decentralized solution for forex trading. Powered by Ethereum blockchain technology, this application leverages smart contract functionalities to facilitate secure and transparent FX transactions.
 
-
-
 ## Key Features
 
 - **Decentralized Forex Trading**: Trade various fiat pegged stablecoins in a decentralized environment.
@@ -15,6 +13,8 @@ The **Decentralized Forex Exchange (DeFi FX) DApp** is a next-generation platfor
 - **Intuitive User Interface**: Built with Next.js and styled using TailwindCSS for a responsive and modern user interface.
 - **Real-time Data Visualization**: Utilizing `lucide-react` for dynamic data display and interactive charts.
 - **Responsive Design**: Fully responsive interface, optimized for a variety of devices and screen sizes.
+
+<img width="812" alt="Screenshot 2024-03-10 at 11 37 07" src="https://github.com/fiendlabs/fiendfx-smart-contracts/assets/162796742/a4c10205-3a42-4153-8a47-99a4b3355c69">
 
 ## Installation and Setup
 
