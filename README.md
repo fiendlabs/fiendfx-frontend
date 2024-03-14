@@ -14,6 +14,8 @@ The **FX-Linked Decentralized Stable Coin (FxDSC) Platform** is at the forefront
 - **Real-time Data Visualization**: Dynamic data display and interactive charts powered by `lucide-react`.
 - **Responsive Design**: A fully responsive platform design, ensuring an optimal user experience across different devices and screen sizes.
 
+<img width="812" alt="Screenshot 2024-03-10 at 11 37 07" src="https://github.com/fiendlabs/fiendfx-smart-contracts/assets/162796742/a4c10205-3a42-4153-8a47-99a4b3355c69">
+
 ## Installation and Setup
 
 Begin your journey with the FxDSC Platform by following these steps:
