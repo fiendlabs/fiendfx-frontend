@@ -1,5 +1,5 @@
 import { DscContractAbi } from '@/lib/DscContractAbi'
-import { TEST_DSCE_ADDRESS } from '@/lib/constants'
+import { TEST_ENGINE_ADDRESS } from '@/lib/constants'
 import { Abi } from 'viem'
 import { useContractReads } from 'wagmi'
 
@@ -7,7 +7,7 @@ const TestReadPrecision = () => {
     const { data, isError, isSuccess, isLoading } = useContractReads({
         contracts: [
             {
-                address: TEST_DSCE_ADDRESS,
+                address: TEST_ENGINE_ADDRESS,
                 abi: DscContractAbi as Abi,
                 functionName: 'getPrecision',
                 // No args needed for this function

@@ -1,7 +1,7 @@
 "use client";
 
 import { DscContractAbi } from "@/lib/DscContractAbi";
-import { TEST_DSCE_ADDRESS, TEST_WETH_ADDRESS } from "@/lib/constants";
+import { TEST_ENGINE_ADDRESS, TEST_WETH_ADDRESS } from "@/lib/constants";
 import { parseUnits } from "viem/utils";
 import { useContractWrite } from "wagmi";
 
@@ -10,7 +10,7 @@ import { useContractWrite } from "wagmi";
 
 const TestDepositCollateralAndMint = () => {
   const { data, isLoading, isSuccess, write } = useContractWrite({
-    address: TEST_DSCE_ADDRESS,
+    address: TEST_ENGINE_ADDRESS,
     abi: DscContractAbi,
     functionName: "depositCollateralAndMintDsc",
     args: [

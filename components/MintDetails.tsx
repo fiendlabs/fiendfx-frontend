@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import MintPriceCard from "@/components/MintPriceCard";
 import { useAccount, useContractReads } from "wagmi";
-import { TEST_DSCE_ADDRESS, TEST_WETH_ADDRESS } from "@/lib/constants";
+import { TEST_ENGINE_ADDRESS, TEST_WETH_ADDRESS } from "@/lib/constants";
 import { DscContractAbi } from "@/lib/DscContractAbi";
 import { Abi, formatUnits } from "viem";
 import DataCard from "@/components/DataCard";
@@ -36,34 +36,34 @@ const MintDetails = () => {
   const { data, isError, isSuccess, isLoading } = useContractReads({
     contracts: [
       {
-        address: TEST_DSCE_ADDRESS,
+        address: TEST_ENGINE_ADDRESS,
         abi: DscContractAbi as Abi,
         functionName: "getUsdValue",
         args: [TEST_WETH_ADDRESS, 1000000000000000000],
       },
       {
-        address: TEST_DSCE_ADDRESS,
+        address: TEST_ENGINE_ADDRESS,
         abi: DscContractAbi as Abi,
         functionName: "getPrecision",
       },
       {
-        address: TEST_DSCE_ADDRESS,
+        address: TEST_ENGINE_ADDRESS,
         abi: DscContractAbi as Abi,
         functionName: "getAdditionalFeedPrecision",
       },
       {
-        address: TEST_DSCE_ADDRESS,
+        address: TEST_ENGINE_ADDRESS,
         abi: DscContractAbi as Abi,
         functionName: "getCollateralBalanceOfUser",
         args: [addresss, TEST_WETH_ADDRESS],
       },
       {
-        address: TEST_DSCE_ADDRESS,
+        address: TEST_ENGINE_ADDRESS,
         abi: DscContractAbi as Abi,
         functionName: "getLiquidationThreshold",
       },
       {
-        address: TEST_DSCE_ADDRESS,
+        address: TEST_ENGINE_ADDRESS,
         abi: DscContractAbi as Abi,
         functionName: "getHealthFactor",
         args: [addresss],

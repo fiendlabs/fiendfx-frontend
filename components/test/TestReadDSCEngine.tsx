@@ -1,5 +1,5 @@
 import { DscContractAbi } from '@/lib/DscContractAbi'
-import { TEST_DSCE_ADDRESS } from '@/lib/constants'
+import { TEST_ENGINE_ADDRESS } from '@/lib/constants'
 import { Abi } from 'viem'
 import { useContractReads } from 'wagmi'
 
@@ -15,7 +15,7 @@ const TestReadDSCEngine = () => {
     const { data, isError, isSuccess, isLoading } = useContractReads({
         contracts: [
           {
-            address: TEST_DSCE_ADDRESS,
+            address: TEST_ENGINE_ADDRESS,
             abi: DscContractAbi as Abi,
             functionName: 'getAccountInformation',
             args: ['0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266'],

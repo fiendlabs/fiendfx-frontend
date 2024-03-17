@@ -1,7 +1,7 @@
 import { useContractReads } from "wagmi";
 import { DscContractAbi} from "@/lib/DscContractAbi";
 import { WethAbi } from "@/lib/WethAbi";
-import { TEST_ADDRESS, TEST_DSCE_ADDRESS, TEST_WETH_ADDRESS } from "@/lib/constants";
+import { TEST_ADDRESS, TEST_ENGINE_ADDRESS, TEST_WETH_ADDRESS } from "@/lib/constants";
 import { Abi } from "viem";
 
 
@@ -20,40 +20,40 @@ const useContractData = (mintTokenAddress: string, collateralTokenAddress: strin
             args: [userAddress],
           },
           {
-            address: TEST_DSCE_ADDRESS,
+            address: TEST_ENGINE_ADDRESS,
             abi: DscContractAbi as Abi,
             functionName: "getCollateralTokenPriceFeed",
             args: [TEST_WETH_ADDRESS],
           },
           {
-            address: TEST_DSCE_ADDRESS,
+            address: TEST_ENGINE_ADDRESS,
             abi: DscContractAbi as Abi,
             functionName: "getPrecision",
           },
           {
-            address: TEST_DSCE_ADDRESS,
+            address: TEST_ENGINE_ADDRESS,
             abi: DscContractAbi as Abi,
             functionName: "getAdditionalFeedPrecision",
           },
           {
-            address: TEST_DSCE_ADDRESS,
+            address: TEST_ENGINE_ADDRESS,
             abi: DscContractAbi as Abi,
             functionName: "getCollateralBalanceOfUser",
             args: [userAddress, TEST_WETH_ADDRESS],
           },
           {
-            address: TEST_DSCE_ADDRESS,
+            address: TEST_ENGINE_ADDRESS,
             abi: DscContractAbi as Abi,
             functionName: "getLiquidationThreshold",
           },
           {
-            address: TEST_DSCE_ADDRESS,
+            address: TEST_ENGINE_ADDRESS,
             abi: DscContractAbi as Abi,
             functionName: "getHealthFactor",
             args: [userAddress],
           },
           {
-            address: TEST_DSCE_ADDRESS,
+            address: TEST_ENGINE_ADDRESS,
             abi: DscContractAbi as Abi,
             functionName: "getAccountInformation",
             args: [userAddress],
@@ -65,13 +65,13 @@ const useContractData = (mintTokenAddress: string, collateralTokenAddress: strin
             args: [userAddress],
           },
           {
-            address: TEST_DSCE_ADDRESS,
+            address: TEST_ENGINE_ADDRESS,
             abi: DscContractAbi as Abi,
             functionName: "getCollateralBalanceOfUser",
             args: [userAddress, collateralTokenAddress],
           },
           {
-            address: TEST_DSCE_ADDRESS,
+            address: TEST_ENGINE_ADDRESS,
             abi: DscContractAbi as Abi,
             functionName: "getCollateralTokenPriceFeed",
             args: [collateralTokenAddress],
