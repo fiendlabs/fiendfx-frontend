@@ -7,6 +7,7 @@ import GetStartedCard from "@/components/GetStartedCard";
 import HeadingOne from "@/components/HeadingOne";
 import { HeadingTwo } from "@/components/HeadingTwo";
 import Mint from "@/components/Mint";
+import TokensTable from "@/components/TokensTable";
 import Trade from "@/components/Trade";
 import TransactionsTable from "@/components/TransactionsTable";
 import { json } from "stream/consumers";
@@ -93,9 +94,12 @@ export default function Home() {
         <Burn />
         <Trade />
       </div>
-      <CardsMetric title="Eth/USD" description="Current price of Eth" data={ethPriceData} />
+      <CardsMetric title="ETH/USD" description="Current price of ETH" data={ethPriceData} />
+      <HeadingTwo text="Upcoming Coins" />
+      <TokensTable/>
       <HeadingTwo text="Transaction History" />
       <TransactionsTable/>
+
     </div>
   );
 }
