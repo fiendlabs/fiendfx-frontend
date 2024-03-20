@@ -3,7 +3,7 @@ import { Deposit } from "@/types";
 import depositColumns from "@/components/deposits/DepositsColumns";
 import DataTable from "@/components/transactions/data-table";
 import { useAccount, useContractReads } from "wagmi";
-import { TEST_ADDRESS, TEST_DSCE_ADDRESS, TEST_WETH_ADDRESS } from "@/lib/constants";
+import { TEST_ADDRESS, TEST_ENGINE_ADDRESS, TEST_WETH_ADDRESS } from "@/lib/constants";
 import { DscContractAbi } from "@/lib/DscContractAbi";
 import { Abi, formatUnits } from "viem";
 
@@ -23,18 +23,18 @@ const MintDeposits = () => {
   const { data, isError, isSuccess, isLoading } = useContractReads({
     contracts: [
       {
-        address: TEST_DSCE_ADDRESS,
+        address: TEST_ENGINE_ADDRESS,
         abi: DscContractAbi as Abi,
         functionName: "getAccountInformation",
         args: ['0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266'],
       },
       {
-        address: TEST_DSCE_ADDRESS,
+        address: TEST_ENGINE_ADDRESS,
         abi: DscContractAbi as Abi,
         functionName: "getPrecision",
       },
       {
-        address: TEST_DSCE_ADDRESS,
+        address: TEST_ENGINE_ADDRESS,
         abi: DscContractAbi as Abi,
         functionName: "getAdditionalFeedPrecision",
       },

@@ -44,7 +44,7 @@ import { Input } from "@/components/ui/input";
 import { usePrepareContractWrite, useContractWrite,  useBalance, useAccount, useContractReads } from "wagmi";
 
 // Contract Imports
-import { TEST_DSCE_ADDRESS, INPUT_TOKENS, TEST_ADDRESS, OUTPUT_TOKENS, TEST_DSC_ADDRESS, TEST_WETH_ADDRESS } from "@/lib/constants";
+import { TEST_ENGINE_ADDRESS, INPUT_TOKENS, TEST_ADDRESS, OUTPUT_TOKENS, TEST_TOKEN_ADDRESS, TEST_WETH_ADDRESS } from "@/lib/constants";
 import { DscContractAbi } from "@/lib/DscContractAbi";
 import { Abi, formatUnits, parseUnits } from "viem";
 import { WethAbi } from "@/lib/WethAbi";
@@ -100,7 +100,7 @@ const MintTokenBox = () => {
     const outputAmountFormatted = parseUnits(outputAmount.toString(), 18);
   
   const { config, error: contractWriteError } = usePrepareContractWrite({
-    address: TEST_DSCE_ADDRESS,
+    address: TEST_ENGINE_ADDRESS,
     abi: DscContractAbi,
     functionName: "depositCollateralAndMintDsc", // Replace with your function name
     args: [
@@ -125,7 +125,7 @@ const MintTokenBox = () => {
         args: [TEST_ADDRESS],
       },
       {
-        address: TEST_DSCE_ADDRESS,
+        address: TEST_ENGINE_ADDRESS,
         abi: DscContractAbi as Abi,
         functionName: 'getCollateralTokenPriceFeed',
         args: [TEST_WETH_ADDRESS],

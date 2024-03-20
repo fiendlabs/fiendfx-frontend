@@ -20,6 +20,13 @@ export type TokenObject = {
     value: string
 }
 
+// Extend TokenObject with an additional fields of engine and address
+export type Token = TokenObject & {
+    engine: string
+    address: string
+    state: 'coming soon' | 'active' | 'inactive'
+}
+
 // Mint token object should be the same as TokenObject with an additional field of engine
 export type MintTokenObject = TokenObject & {
     engine: string
