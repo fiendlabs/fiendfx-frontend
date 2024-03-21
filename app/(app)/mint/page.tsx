@@ -29,6 +29,7 @@ const MintPage = () => {
     const mintTokenObject = MINT_TOKENS.find(
       (token) => token.symbol === queryToken
     );
+
   
     const collateralTokenObject = INPUT_TOKENS.find(
       (token) => token.symbol === collateralToken

@@ -16,15 +16,15 @@ export const TEST_TOKEN_ADDRESS = "0xF30021646269007b0bdc0763fd736C6380602F2F";
 export const TEST_WETH_ADDRESS = "0xdd13E55209Fd76AfE204dBda4007C227904f0a81";
 export const TEST_ADDRESS = "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266";
 export const INPUT_TOKENS = [
-  { label: "Ethereum", symbol: "eth", value: "0x1" },
-  { label: "Wrapped BTC", symbol: "wbtc", value: "0x2" },
+  { label: "Ethereum", symbol: "ETH", value: "0x1" },
+  { label: "Wrapped BTC", symbol: "WBTC", value: "0x2" },
   {
     label: "Wrapped Ethereum",
-    symbol: "weth",
+    symbol: "WETH",
     value: TEST_WETH_ADDRESS,
   },
-  { label: "USDC", symbol: "usdc", value: "0x3" },
-  { label: "USDT", symbol: "usdt", value: "0x4" },
+  { label: "USDC", symbol: "USDC", value: "0x3" },
+  { label: "USDT", symbol: "USDT", value: "0x4" },
 ];
 
 export const OUTPUT_TOKENS = [
@@ -32,11 +32,11 @@ export const OUTPUT_TOKENS = [
   { label: "Wrapped BTC", symbol: "WBTC", value: "0x2" },
   {
     label: "Wrapped ETH",
-    symbol: "weth",
+    symbol: "WETH",
     value: TEST_WETH_ADDRESS,
   },
-  { label: "USDC", symbol: "usdc", value: "0x3" },
-  { label: "USDT", symbol: "usdt", value: "0x4" },
+  { label: "USDC", symbol: "USDC", value: "0x3" },
+  { label: "USDT", symbol: "USDT", value: "0x4" },
 ];
 
 
