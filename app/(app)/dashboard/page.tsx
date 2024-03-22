@@ -94,7 +94,7 @@ export default function Home() {
         <Burn />
         <Trade />
       </div>
-      <CardsMetric title="ETH/USD" description="Current price of ETH" data={ethPriceData} />
+      <CardsMetric title="Volume" description="Mint Daily Tracker" data={data} />
       <HeadingTwo text="Upcoming Coins" />
       <TokensTable/>
       <HeadingTwo text="Transaction History" />
